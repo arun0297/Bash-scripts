@@ -1,5 +1,5 @@
 
-a=$(cat /etc/ssh/config.conf | grep ClientAliveInterval | grep ^[^#] | grep -o '[0-9]*$')
+a=$(cat /etc/ssh/config.conf | grep ClientAliveInterval | grep ^[^#] | grep -o '[0-9a-Z]*$')   #updated regex in grep
 b=$(cat /etc/ssh/config.conf | grep ClientAliveCountMax | grep ^[^#] | grep -o '[0-9]*')
 
 if [[ ${a: -1} = 'm' ]]
